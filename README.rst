@@ -145,11 +145,13 @@ Initialize the filter's matrices.
 
 .. code-block:: python
 
+    # initial state (location and velocity)
     my_filter.x = np.array([[2.],
-                    [0.]])       # initial state (location and velocity)
+                            [0.]])
 
+    # state transition matrix
     my_filter.F = np.array([[1.,1.],
-                    [0.,1.]])    # state transition matrix
+                            [0.,1.]])
 
     my_filter.H = np.array([[1.,0.]])    # Measurement function
     my_filter.P *= 1000.                 # covariance matrix
